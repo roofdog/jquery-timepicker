@@ -41,13 +41,13 @@
 
         // pick up settings from data attributes
         var attributeOptions = [];
-        for (var key in $.fn.timepicker.defaults) {
+        for (var key in $.fn.jquery_timepicker.defaults) {
           if (self.data(key)) {
             attributeOptions[key] = self.data(key);
           }
         }
 
-        var settings = $.extend({}, $.fn.timepicker.defaults, options, attributeOptions);
+        var settings = $.extend({}, $.fn.jquery_timepicker.defaults, options, attributeOptions);
 
         if (settings.lang) {
           _lang = $.extend(_lang, settings.lang);
@@ -1309,7 +1309,7 @@
   }
 
   // Plugin entry
-  $.fn.timepicker = function(method) {
+  $.fn.jquery_timepicker = function(method) {
     if (!this.length) return this;
     if (methods[method]) {
       // check if this element is a timepicker
@@ -1328,7 +1328,7 @@
   };
 
   // Default plugin options.
-  $.fn.timepicker.defaults = {
+  $.fn.jquery_timepicker.defaults = {
     appendTo: "body",
     className: null,
     closeOnWindowScroll: false,
